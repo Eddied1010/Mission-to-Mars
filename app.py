@@ -23,3 +23,15 @@ def scrape():
 
    if __name__ == "__main__":
     app.run()
+
+ 
+    # Assign columns and set index of dataframe
+    df.columns=['Description', 'Mars', 'Earth']
+    df.set_index('Description', inplace=True)
+
+    # Convert dataframe into HTML format, add bootstrap
+    return df.to_html()
+
+
+
+
